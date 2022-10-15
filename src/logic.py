@@ -53,3 +53,4 @@ def validateMove(move, board):
         return True
     else:
         return False
+

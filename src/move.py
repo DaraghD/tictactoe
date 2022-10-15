@@ -1,9 +1,33 @@
 def get_move():
-    row = int(input("Enter Row:"))
-    row = row - 1
+    while True:
+        row = input("Enter Row:")
+        if row.isnumeric():
+            row = int(row)
 
-    column = int(input("Enter Column:"))
-    column = column - 1
+        else:
+            print("invalid input")
+            continue
 
-    return (row, column)
+        if row > 3:
+            print("invalid input")
+            continue
+        else:
+            row = row - 1
+            break
 
+    while True:
+        column = input("Enter Column:")
+        if column.isnumeric():
+            column = int(column)
+        else:
+            print("not a number")
+            continue
+
+        if column > 3:
+            print("invalid input")
+            continue
+        else:
+            column = column - 1
+            break
+
+    return row, column
