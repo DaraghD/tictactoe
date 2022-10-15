@@ -1,10 +1,9 @@
 board = [
-    [0, 1, 2],
-    [0, 1, 2],
-    [0, 1, 2],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
 
 ]
-
 
 def printBoard():
     print(board[0])
@@ -12,11 +11,17 @@ def printBoard():
     print(board[2])
 
 
-# [] = row , [] = column
-row = int(input("enter input: row"))
-row = row - 1
+def main():
 
-column = int(input("enter input: column"))
-column = column - 1
-printBoard()
-print("{r} = row , {c} = column".format(r=row, c=column))
+    row = int(input("enter input: row"))
+    row = row - 1
+
+    column = int(input("enter input: column"))
+    column = column - 1
+
+    board[row][column] = 1
+
+    printBoard()
+    print("{r} = row , {c} = column".format(r=row, c=column))
+
+main()
