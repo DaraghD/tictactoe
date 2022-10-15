@@ -1,3 +1,16 @@
+import random
+
+
+def coinflip(p1choice, p2choice):
+    coin = random.randrange(1, 2, 1)
+    if coin == 1:
+        winner = p1choice
+        print("{name} gets to go first".format(name=p1choice))
+    else:
+        winner = p2choice
+        print("{name} gets to go first".format(name=p2choice))
+
+
 def checkWin(board, player):
     if board[0][0] + board[0][1] + board[0][2] == player * 3:
         if board[0][0] == 0 or board[0][1] == 0 or board[0][2] == 0:
@@ -53,4 +66,3 @@ def validateMove(move, board):
         return True
     else:
         return False
-
